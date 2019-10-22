@@ -26,7 +26,8 @@ describe("basics", function() {
             ////////////////////////////////////////////////////////////////////
             // Declare "someVariable" in way so that the declaration is hoisted.
             // ✏️ ADD CODE HERE ✏️
-
+            var someVariable;
+            someVariable="undefined";
             ////////////////////////////////////////////////////////////////////
         });
     });
@@ -35,12 +36,12 @@ describe("basics", function() {
         it("should run without errors", function() {
             expect(() => {
                 someVariable; // someVariable should NOT yet be defined here
-            }).to.throw("Cannot access 'someVariable' before initialization");
+            }).to.throw("can't access lexical declaration `someVariable' before initialization");
 
             ////////////////////////////////////////////////////////////////////
             // Declare "someVariable" in way so that the declaration is NOT hoisted.
             // ✏️ ADD CODE HERE ✏️
-
+            let someVariable;
             ////////////////////////////////////////////////////////////////////
 
             expect(someVariable).to.equal(undefined);
